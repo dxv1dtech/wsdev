@@ -12,8 +12,8 @@ body {
     justify-content: center; 
     align-items: center; 
     padding: 15px 20px; 
-    background-color: #0B0B16;
     position: fixed; 
+    background-color: #0B0B16;
     left: 0;
     right: 0;
     top: 10px;
@@ -87,6 +87,11 @@ body {
         flex-direction: column;
         margin-bottom: 15px;
     }
+
+    .content-container img{
+        width: 0;
+        height: 0;
+    }
 }
 
 @media (min-width: 769px){
@@ -123,12 +128,6 @@ body {
     color: white;
     font-size: 16px;
     cursor: pointer;
-}
-.socials{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 15px;
-    width: 30%;
 }
 .content-container button:hover{
     background-color: #bf5e0a;
