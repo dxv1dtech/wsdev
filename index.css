@@ -106,18 +106,18 @@ body {
 .content-container button{
     padding: 15px 30px;
     border: none;
-    border-radius: 12px;
-    background: linear-gradient(to right, #E47718, #EAB17F);
+    border-radius: 3vh;
+    background-color: #e07d26;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
 .content-container button:hover{
-    background: linear-gradient(to right, #EAB17F, #E47718);
+    background-color: #bf5e0a;
 }
 .content-container button a{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 @keyframes fadeIn1 {
     from {
