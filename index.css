@@ -1,0 +1,141 @@
+*{
+    font-family: 'Red Hat Display', sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a33;
+}
+.navbar{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 15px 20px; 
+    position: fixed; 
+    background-color: #0B0B16;
+    left: 0;
+    right: 0;
+    top: 10px;
+    border-radius: 3vh;
+    margin: 0 auto;
+    width: 70%; 
+    max-width: 700px;
+    z-index: 1000;
+}
+.logo{
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.nav-links li{
+    display: inline;
+}
+.nav-links a{
+    color: #F6F4F0;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+.nav-links a:hover{
+    background-color: #899499;
+    border-radius: 2vh;
+}
+/* Responsive Styles */
+@media (max-width: 768px){
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10px;
+        top: 0;
+        border-radius: 0;
+        background-color: #0B0B16;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .nav-links{
+        flex-direction: column;
+        display: none;
+        width: auto;
+        margin-top: 10px;
+    }
+    .nav-links.active{
+        display: flex;
+    }
+    .toggle-btn{
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+@media (min-width: 769px){
+    .toggle-btn {
+        display: none;
+    }
+}
+.content-container{
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 0;
+    text-align: center;
+    font-size: 3vh;
+    text-align: justify;
+    opacity: 0;
+    animation: fadeIn1 1s ease-out forwards;
+}
+.content-container p{
+    padding-top: 50px;
+    color: #C6C6F1;
+    font-weight: 800;
+}
+.content-container button{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, #E47718, #EAB17F);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.content-container button:hover{
+    background: linear-gradient(to right, #EAB17F, #E47718);
+}
+.content-container button a{
+    text-decoration: none;
+    color: white;
+}
+@keyframes fadeIn1 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+nav{
+    opacity: 0;
+    animation: fadeIn2 1s ease-in forwards;
+}
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
